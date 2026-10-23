@@ -1,0 +1,48 @@
+---
+// Hazte socio: panel de color con ventajas, cuota (campo `cuota`) y botón.
+import { seccion } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+import Icono from '../ui/Icono.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+const cuota = s?.cuota as { precio?: string; periodo?: string; nota?: string } | undefined;
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id}>
+      <div class="relative overflow-hidden rounded-[2rem] bg-primario p-6 text-white md:p-14">
+        <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-acento/30" aria-hidden="true" />
+        <div class="absolute -bottom-24 left-1/3 h-56 w-56 rounded-full bg-white/5" aria-hidden="true" />
+        <div class="relative grid gap-10 md:grid-cols-5 md:items-center">
+          <div class="md:col-span-3">
+            {s.antetitulo && <p class="antetitulo">{s.antetitulo}</p>}
+            <h2 class="mt-2 text-[clamp(1.9rem,5vw,2.8rem)]">{s.titulo}</h2>
+            {s.texto && <p class="mt-4 text-lg opacity-90">{s.texto}</p>}
+            <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+              {s.items.map((it) => (
+                <li class="flex gap-3">
+                  <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-acento text-[#1b1b1b]"><Icono nombre="check" tam={16} /></span>
+                  <span>
+                    <strong>{it.titulo}</strong>
+                    {it.texto && <span class="block text-sm opacity-80">{it.texto}</span>}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="rounded-[1.5rem] bg-white p-6 text-center text-texto md:col-span-2 md:p-8">
+            {cuota?.precio && (
+              <p>
+                <span class="font-display text-5xl font-extrabold text-primario">{cuota.precio}</span>
+                {cuota.periodo && <span class="opacity-70"> / {cuota.periodo}</span>}
+              </p>
+            )}
+            {cuota?.nota && <p class="mt-2 text-sm opacity-70">{cuota.nota}</p>}
+            {s.cta && <a class="btn mt-6 w-full" href={s.cta.url}>{s.cta.texto}</a>}
+          </div>
+        </div>
+      </div>
+    </Seccion>
+  )
+}

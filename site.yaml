@@ -1,0 +1,102 @@
+# Contenido de la web. Es lo único que rellena la plataforma NoExpertise.
+# Las secciones se muestran en el orden de este fichero. Para ocultar una: activa: false.
+nombre: Club de Montaña Peña Oroel
+eslogan: Montaña, escalada y esquí de travesía en Jaca desde 1972.
+sector: club
+logo: ""          # ruta a una imagen en public/ (p. ej. /logo.svg). Vacío = nombre en texto.
+colores:
+  primario: "#2f6b3a"
+  acento: "#f08a24"
+  fondo: "#fffdf7"
+  texto: "#23301f"
+contacto:
+  telefono: "974 36 11 72"
+  email: info@cmpenaoroel.es
+  direccion: Calle Ramiro I 9, bajos, 22700 Jaca (Huesca)
+  horario: "Sede abierta martes y jueves de 19:30 a 21:30."
+  whatsapp: "+34 699 36 11 72"
+redes:
+  instagram: https://www.instagram.com/
+  facebook: https://www.facebook.com/
+  linkedin: ""
+menu:
+  - { texto: Actividades, url: "/#actividades" }
+  - { texto: Hazte socio, url: "/#hazte-socio" }
+  - { texto: Noticias, url: "/#noticias" }
+  - { texto: La junta, url: "/#equipo" }
+  - { texto: Contacto, url: "/#contacto" }
+boton_cabecera: { texto: Hazte socio, url: "/#hazte-socio" }
+seo:
+  titulo: Club de Montaña Peña Oroel · Jaca
+  descripcion: "Club de montaña de Jaca: salidas cada fin de semana, escuela de escalada, esquí de travesía y actividades para familias. Hazte socio desde 35 € al año."
+  tipo: SportsClub
+marca_pie: true
+
+secciones:
+  hero:
+    activa: true
+    antetitulo: Desde 1972 en Jaca
+    titulo: Sal al monte
+    titulo_destacado: en buena compañía.   # parte del titular subrayada
+    texto: "Salidas cada fin de semana, escuela de escalada y actividades para todas las edades. Ven a conocernos."
+    imagen: /placeholders/hero.svg
+    galeria: [/placeholders/galeria-2.svg]   # segunda foto del collage
+    cta: { texto: Hazte socio, url: "/#hazte-socio" }
+    cta_secundario: { texto: Próximas salidas, url: "/#actividades" }
+    items:
+      - { titulo: "640", texto: socios, icono: usuarios }
+      - { titulo: "50", texto: salidas al año, icono: montana }
+      - { titulo: "53", texto: años de club, icono: corazon }
+
+  actividades:
+    activa: true
+    antetitulo: Actividades
+    titulo: Qué hacemos
+    texto: "Organizadas por socios voluntarios. Todas las salidas tienen un responsable con formación."
+    items:
+      - { titulo: Salidas de montaña, texto: "Rutas de dificultad variada cada sábado o domingo por el Pirineo.", icono: montana, cuando: Fines de semana }
+      - { titulo: Escuela de escalada, texto: "Cursos de iniciación y perfeccionamiento en el rocódromo y en roca.", icono: escudo, cuando: Martes y jueves }
+      - { titulo: Esquí de travesía, texto: "Salidas y curso de seguridad en avalanchas con guía titulado.", icono: sol, cuando: Diciembre – abril }
+      - { titulo: Montaña en familia, texto: "Excursiones cortas pensadas para ir con niños desde 4 años.", icono: nino, cuando: Un domingo al mes }
+      - { titulo: Bici de montaña, texto: "Rutas por la Jacetania y el Camino de Santiago.", icono: bici, cuando: Primavera y otoño }
+      - { titulo: Biblioteca y charlas, texto: "Más de 900 guías y mapas, y proyecciones en la sede.", icono: calendario, cuando: Viernes }
+
+  hazte-socio:
+    activa: true
+    antetitulo: Hazte socio
+    titulo: Únete al club
+    texto: "Tu cuota mantiene las actividades, la escuela y el refugio. Y te da ventajas desde el primer día."
+    items:
+      - { titulo: Seguro federativo, texto: Con la licencia de la FAM. }
+      - { titulo: Descuentos, texto: En tiendas de montaña de Jaca. }
+      - { titulo: Cursos a precio de socio, texto: "Escalada, nieve y orientación." }
+      - { titulo: Préstamo de material, texto: "Crampones, piolets y ARVA." }
+    cuota: { precio: "35 €", periodo: año, nota: "Menores de 18 años y familias numerosas: 15 €." }
+    cta: { texto: Quiero hacerme socio, url: "/#contacto" }
+
+  noticias:
+    activa: true
+    antetitulo: Noticias
+    titulo: Lo último del club
+    noticias:
+      - { fecha: 12 oct 2026, titulo: Abiertas las inscripciones del curso de esquí de travesía, texto: "Plazas limitadas a 16 personas. Empieza el 9 de enero." }
+      - { fecha: 28 sep 2026, titulo: "Crónica: travesía Respomuso – Balaitús", texto: "Veinte socios en dos días espectaculares de alta montaña." }
+      - { fecha: 15 sep 2026, titulo: Nueva sede para la biblioteca, texto: "Ampliamos la sala con donaciones de los socios fundadores." }
+
+  equipo:
+    activa: true
+    antetitulo: La junta
+    titulo: Quién organiza todo esto
+    texto: "Socios voluntarios elegidos en asamblea cada cuatro años."
+    personas:
+      - { nombre: Rosa Lacasta, cargo: Presidenta, foto: /placeholders/persona.svg }
+      - { nombre: Alberto Pueyo, cargo: Vicepresidente, foto: /placeholders/persona.svg }
+      - { nombre: Inés Marco, cargo: Secretaria, foto: /placeholders/persona.svg }
+      - { nombre: Jorge Abad, cargo: Tesorero, foto: /placeholders/persona.svg }
+      - { nombre: Teresa Ara, cargo: Vocal de escuela, foto: /placeholders/persona.svg }
+
+  contacto:
+    activa: true
+    antetitulo: Contacto
+    titulo: Pásate por la sede
+    texto: "Escríbenos o ven un martes o jueves por la tarde. Te contamos todo con un café."

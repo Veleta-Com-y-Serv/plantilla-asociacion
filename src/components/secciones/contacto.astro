@@ -1,0 +1,35 @@
+---
+// Contacto: dónde encontrarnos (sede y horario de atención) + formulario.
+import { seccion, site, tel, mapa, whatsapp } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+import Titular from '../ui/Titular.astro';
+import Icono from '../ui/Icono.astro';
+import FormularioContacto from '../ui/FormularioContacto.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+const c = site.contacto;
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id} class="bg-primario/[0.07]">
+      <div class="grid gap-10 md:grid-cols-2">
+        <div>
+          <Titular antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
+          <ul class="grid gap-4">
+            {c.direccion && (
+              <li class="flex gap-3"><Icono nombre="mapa" class="shrink-0 text-acento" /><a href={mapa(c.direccion)} rel="noopener" target="_blank" class="underline-offset-4 hover:underline">{c.direccion}</a></li>
+            )}
+            {c.horario && <li class="flex gap-3"><Icono nombre="reloj" class="shrink-0 text-acento" />{c.horario}</li>}
+            {c.telefono && <li class="flex gap-3"><Icono nombre="telefono" class="shrink-0 text-acento" /><a href={tel(c.telefono)}>{c.telefono}</a></li>}
+            {c.whatsapp && <li class="flex gap-3"><Icono nombre="whatsapp" class="shrink-0 text-acento" /><a href={whatsapp(c.whatsapp)} rel="noopener" target="_blank">WhatsApp del club</a></li>}
+            {c.email && <li class="flex gap-3"><Icono nombre="correo" class="shrink-0 text-acento" /><a class="break-all" href={`mailto:${c.email}`}>{c.email}</a></li>}
+          </ul>
+        </div>
+        <div class="tarjeta p-6 md:p-8">
+          <FormularioContacto boton="Enviar" />
+        </div>
+      </div>
+    </Seccion>
+  )
+}

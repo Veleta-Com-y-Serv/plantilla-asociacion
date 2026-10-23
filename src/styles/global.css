@@ -1,0 +1,41 @@
+/* Asociación / club — estilo cercano: humanista, colores vivos, etiquetas, tarjetas con franja de color y formas orgánicas. */
+@import "tailwindcss";
+@import "./comun.css";
+@config "../../tailwind.config.mjs";
+
+:root {
+  --fuente-texto: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans", source-sans-pro, system-ui, sans-serif;
+  --fuente-titulos: "Avenir Next Rounded", Seravek, "Gill Sans Nova", Ubuntu, "Trebuchet MS", Calibri, system-ui, sans-serif;
+  --radio: .75rem; --ritmo: 3.75rem; --ritmo-md: 5.5rem; --ancho: 72rem;
+}
+
+@layer base {
+  body { font-family: var(--fuente-texto); font-size: 1.075rem; line-height: 1.6; }
+  h1, h2, h3 { font-family: var(--fuente-titulos); font-weight: 750; letter-spacing: -0.02em; line-height: 1.1; }
+}
+
+@layer components {
+  .antetitulo { display: inline-flex; align-items: center; gap: .4rem; font-weight: 700; font-size: .9rem; color: var(--c-acento); }
+  .antetitulo::before { content: "●"; font-size: .6rem; }
+  .titulo-seccion { font-size: clamp(1.9rem, 5vw, 2.75rem); margin-top: .4rem; color: var(--c-primario); }
+  .titular { max-width: 42rem; margin-bottom: 2.5rem; }
+  .titular--centro { margin-inline: auto; text-align: center; }
+  .titular-texto { margin-top: .8rem; font-size: 1.1rem; opacity: .8; }
+  .subrayado { background: linear-gradient(transparent 62%, color-mix(in srgb, var(--c-acento) 45%, transparent) 62%); }
+
+  .btn { border-radius: .8rem; background: var(--c-acento); color: #1b1b1b; font-weight: 750; }
+  .btn:hover { background: color-mix(in srgb, var(--c-acento) 88%, #000); }
+  .btn-sec { border-radius: .8rem; background: var(--c-primario); color: #fff; font-weight: 700; }
+  .btn-sec:hover { background: color-mix(in srgb, var(--c-primario) 85%, #000); }
+  .tarjeta { background: #fff; border-radius: 1.1rem; border: 2px solid color-mix(in srgb, var(--c-primario) 12%, transparent); }
+  .chip { display: inline-flex; align-items: center; gap: .35rem; border-radius: 999px; padding: .25rem .75rem; font-size: .85rem; font-weight: 700; background: color-mix(in srgb, var(--c-primario) 10%, #fff); color: var(--c-primario); }
+
+  .cabecera--cercana { background: var(--c-primario); color: #fff; }
+  .cabecera--cercana .marca-inicial { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 40% 60% 55% 45%; background: var(--c-acento); color: #1b1b1b; font-weight: 800; }
+  .cabecera--cercana .marca-nombre { font-family: var(--fuente-titulos); font-weight: 750; font-size: 1.15rem; }
+  .cabecera--cercana .cabecera-nav a { font-weight: 600; opacity: .9; }
+  .cabecera--cercana .cabecera-nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; }
+
+  .pie--cercano { background: color-mix(in srgb, var(--c-primario) 92%, #000); color: #fff; }
+  .campo input, .campo textarea { border-radius: .7rem; background: #fff; border-width: 2px; }
+}

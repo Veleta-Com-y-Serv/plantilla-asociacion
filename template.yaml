@@ -1,0 +1,13 @@
+# Metadatos de la plantilla para el catálogo de NoExpertise.
+id: asociacion
+nombre: Asociación / club
+descripcion: Web cercana para asociaciones, clubes y ONG, con actividades, noticias y alta de socios.
+sectores: [asociacion, club, ong]
+secciones: [hero, actividades, hazte-socio, noticias, equipo, contacto]
+estilo: cercano
+plan_minimo: gratis
+version: 1.0.0
+base: astrowind
+demo_url: https://demo-plantilla-asociacion.noexpertise.com
+activa: true
+orden: 60

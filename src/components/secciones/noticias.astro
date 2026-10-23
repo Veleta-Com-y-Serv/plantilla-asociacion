@@ -1,0 +1,25 @@
+---
+// Noticias: lista con fecha en etiqueta. Cada noticia: {fecha, titulo, texto, url opcional}.
+import { seccion } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+import Titular from '../ui/Titular.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id} class="bg-acento/10">
+      <Titular antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
+      <ul class="grid gap-4 md:grid-cols-3">
+        {s.noticias.map((n) => (
+          <li class="tarjeta flex flex-col p-6">
+            <time class="chip self-start">{n.fecha}</time>
+            <h3 class="mt-4 text-lg text-primario">{n.url ? <a href={n.url} class="hover:underline">{n.titulo}</a> : n.titulo}</h3>
+            {n.texto && <p class="mt-2 text-[.95rem] opacity-80">{n.texto}</p>}
+          </li>
+        ))}
+      </ul>
+    </Seccion>
+  )
+}

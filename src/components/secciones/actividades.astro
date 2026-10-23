@@ -1,0 +1,34 @@
+---
+// Actividades: tarjetas con franja superior de color alterno, icono y cuándo (campo `cuando` opcional por actividad).
+import { seccion } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+import Titular from '../ui/Titular.astro';
+import Icono from '../ui/Icono.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+const items = (s?.items ?? []) as { titulo: string; texto?: string; icono?: string; cuando?: string }[];
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id}>
+      <Titular antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
+      <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map((it, i) => (
+          <li class:list={['tarjeta overflow-hidden border-t-[6px]', i % 2 ? 'border-t-acento' : 'border-t-primario']}>
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-3">
+                <span class:list={['grid h-11 w-11 place-items-center rounded-full', i % 2 ? 'bg-acento/20 text-acento' : 'bg-primario/10 text-primario']}>
+                  <Icono nombre={it.icono} />
+                </span>
+                {it.cuando && <span class="chip">{it.cuando}</span>}
+              </div>
+              <h3 class="mt-4 text-xl text-primario">{it.titulo}</h3>
+              {it.texto && <p class="mt-2 opacity-80">{it.texto}</p>}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </Seccion>
+  )
+}
