@@ -39,8 +39,8 @@ secciones:
     titulo: Sal al monte
     titulo_destacado: en buena compañía.   # parte del titular subrayada
     texto: "Salidas cada fin de semana, escuela de escalada y actividades para todas las edades. Ven a conocernos."
-    imagen: /placeholders/hero.svg
-    galeria: [/placeholders/galeria-2.svg]   # segunda foto del collage
+    imagen: /fotos/hero.jpg
+    galeria: [/fotos/galeria-2.jpg]   # segunda foto del collage
     cta: { texto: Hazte socio, url: "/#hazte-socio" }
     cta_secundario: { texto: Próximas salidas, url: "/#actividades" }
     items:
@@ -89,11 +89,11 @@ secciones:
     titulo: Quién organiza todo esto
     texto: "Socios voluntarios elegidos en asamblea cada cuatro años."
     personas:
-      - { nombre: Rosa Lacasta, cargo: Presidenta, foto: /placeholders/persona.svg }
-      - { nombre: Alberto Pueyo, cargo: Vicepresidente, foto: /placeholders/persona.svg }
-      - { nombre: Inés Marco, cargo: Secretaria, foto: /placeholders/persona.svg }
-      - { nombre: Jorge Abad, cargo: Tesorero, foto: /placeholders/persona.svg }
-      - { nombre: Teresa Ara, cargo: Vocal de escuela, foto: /placeholders/persona.svg }
+      - { nombre: Rosa Lacasta, cargo: Presidenta, foto: /fotos/persona-1.jpg }
+      - { nombre: Alberto Pueyo, cargo: Vicepresidente, foto: /fotos/persona-2.jpg }
+      - { nombre: Inés Marco, cargo: Secretaria, foto: /fotos/persona-3.jpg }
+      - { nombre: Jorge Abad, cargo: Tesorero, foto: /fotos/persona-4.jpg }
+      - { nombre: Teresa Ara, cargo: Vocal de escuela, foto: /fotos/persona-5.jpg }
 
   contacto:
     activa: true

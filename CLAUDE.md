@@ -41,3 +41,5 @@ Antes de dar una orden por buena: `npm run build` sin errores.
 - `hero.titulo_destacado`: final del titular subrayado. `hero.galeria[0]`: segunda foto del collage. `hero.items`: cifras en etiquetas.
 - `actividades.items[].cuando`: etiqueta de fecha/frecuencia.
 - `hazte-socio.cuota` {precio, periodo, nota} y `hazte-socio.items`: ventajas de ser socio.
+
+Fotos de partida en public/fotos/ (generadas con IA, sin derechos de terceros); los SVG de public/placeholders/ siguen de respaldo.

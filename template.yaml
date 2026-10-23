@@ -6,7 +6,7 @@ sectores: [asociacion, club, ong]
 secciones: [hero, actividades, hazte-socio, noticias, equipo, contacto]
 estilo: cercano
 plan_minimo: gratis
-version: 1.0.0
+version: 1.1.0
 base: astrowind
 demo_url: https://demo-plantilla-asociacion.noexpertise.com
 activa: true
