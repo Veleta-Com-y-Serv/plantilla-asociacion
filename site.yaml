@@ -96,6 +96,17 @@ secciones:
       - { nombre: Jorge Abad, cargo: Tesorero, foto: /fotos/persona-4.jpg }
       - { nombre: Teresa Ara, cargo: Vocal de escuela, foto: /fotos/persona-5.jpg }
 
+  preguntas:
+    activa: true
+    antetitulo: Preguntas frecuentes
+    titulo: Lo que nos preguntan antes de apuntarse
+    preguntas:
+      - { pregunta: "¿Qué nivel necesito para venir a las salidas?", respuesta: "Ninguno para empezar. Cada salida indica su dificultad y tenemos cursos de iniciación y actividades en familia." }
+      - { pregunta: "¿Hay que ser socio para participar?", respuesta: "En la mayoría de actividades, sí, porque el seguro va con la licencia federativa. Pregúntanos y te contamos cómo probar antes de apuntarte." }
+      - { pregunta: "¿Cuánto cuesta la cuota?", respuesta: "Depende de la edad y de la licencia que elijas. Te lo explicamos en la sede o por correo, sin compromiso." }
+      - { pregunta: "¿Prestáis material?", respuesta: "Sí, a los socios: crampones, piolets y ARVA. Se reserva en la sede los martes y jueves por la tarde." }
+      - { pregunta: "¿Pueden venir niños?", respuesta: "Sí. Un domingo al mes hacemos excursiones cortas pensadas para ir con niños desde 4 años." }
+
   contacto:
     activa: true
     antetitulo: Contacto

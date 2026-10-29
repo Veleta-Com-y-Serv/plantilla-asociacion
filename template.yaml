@@ -3,10 +3,17 @@ id: asociacion
 nombre: Asociación / club
 descripcion: Web cercana para asociaciones, clubes y ONG, con actividades, noticias y alta de socios.
 sectores: [asociacion, club, ong]
-secciones: [hero, actividades, hazte-socio, noticias, equipo, contacto]
+secciones:
+  - { id: hero, nombre: Portada }
+  - { id: actividades, nombre: Actividades }
+  - { id: hazte-socio, nombre: Hazte socio }
+  - { id: noticias, nombre: Noticias }
+  - { id: equipo, nombre: Equipo }
+  - { id: preguntas, nombre: Preguntas frecuentes }
+  - { id: contacto, nombre: Contacto }
 estilo: cercano
 plan_minimo: gratis
-version: 1.3.0
+version: 1.4.0
 base: astrowind
 demo_url: https://demo-plantilla-asociacion.noexpertise.com
 activa: true
@@ -49,6 +56,12 @@ asistente:
     ayuda: "Las fotos las pones luego en Contenido."
     tipo: lista
     campos: [secciones.equipo.personas]
+  - id: preguntas
+    titulo: "Preguntas frecuentes"
+    pregunta: "¿Qué os preguntan más a menudo? Escribe cada pregunta y lo que respondéis."
+    ayuda: "Si lo prefieres, añádelos luego en Contenido."
+    tipo: lista
+    campos: [secciones.preguntas.preguntas]
   - id: fotos
     titulo: "Tus fotos"
     pregunta: "Pon una foto de portada y, si quieres, alguna más."

@@ -3,7 +3,8 @@
 Web cercana para asociaciones, clubes y ONG, con actividades, noticias y alta de socios.
 
 - Sectores: asociacion, club, ong. Estilo: cercano. Plan mínimo: gratis.
-- Secciones: hero, actividades, hazte-socio, noticias, equipo, contacto.
+- Secciones: hero, actividades, hazte-socio, noticias, equipo, preguntas, contacto.
+- SEO de base incluido (`src/lib/seo.ts`): canónica, og:image, JSON-LD del negocio y de las preguntas frecuentes, `robots.txt`, `sitemap.xml` y `llms.txt`; `noindex` si `seo.indexable: false`.
 - Contenido editable en `site.yaml`; metadatos en `template.yaml`; reglas para el agente en `CLAUDE.md`.
 
 ```

@@ -1,6 +1,7 @@
 ---
 // Hero cercano: titular con palabra subrayada, botones de socio/actividades, collage de dos fotos y cifras en etiquetas.
 import { seccion } from '../../data/site';
+import { altGaleria, altHero } from '../../lib/seo';
 import Imagen from '../ui/Imagen.astro';
 import Icono from '../ui/Icono.astro';
 interface Props { id: string; primera?: boolean }
@@ -36,9 +37,9 @@ const segunda = s?.galeria[0];
           )}
         </div>
         <div class="relative pb-10 md:pb-0">
-          <Imagen src={s.imagen} alt="" ancho={1200} alto={900} prioridad={primera} class="aspect-[4/3] w-[88%] rotate-[-2deg] rounded-[1.5rem] object-cover shadow-xl" />
+          <Imagen src={s.imagen} alt={altHero()} ancho={1200} alto={900} prioridad={primera} class="aspect-[4/3] w-[88%] rotate-[-2deg] rounded-[1.5rem] object-cover shadow-xl" />
           {segunda && (
-            <Imagen src={segunda} alt="" ancho={800} alto={800} class="absolute -bottom-2 right-0 aspect-square w-[45%] rotate-[4deg] rounded-[1.25rem] border-4 border-fondo object-cover shadow-xl md:-bottom-10" />
+            <Imagen src={segunda} alt={altGaleria(1)} ancho={800} alto={800} class="absolute -bottom-2 right-0 aspect-square w-[45%] rotate-[4deg] rounded-[1.25rem] border-4 border-fondo object-cover shadow-xl md:-bottom-10" />
           )}
         </div>
       </div>
