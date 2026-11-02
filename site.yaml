@@ -70,7 +70,7 @@ secciones:
         texto: "Cursos de iniciación y perfeccionamiento en el rocódromo y en roca."
         icono: escudo
         cuando: Martes y jueves
-        imagen: /fotos/galeria-2.jpg
+        imagenes: "/fotos/galeria-2.jpg"
         detalle: |
           La escuela de escalada acompaña a quien empieza y a quien quiere dar un paso más. Los cursos de iniciación arrancan en el rocódromo, un entorno controlado donde se aprende a atarse, asegurar al compañero, moverse con eficacia y caer con confianza antes de salir a la roca.
 
@@ -92,7 +92,7 @@ secciones:
         texto: "Excursiones cortas pensadas para ir con niños desde 4 años."
         icono: nino
         cuando: Un domingo al mes
-        imagen: /fotos/galeria-3.jpg
+        imagenes: "/fotos/galeria-3.jpg"
         detalle: |
           Montaña en familia es la propuesta del club para que madres, padres, abuelos y niños salgan juntos al monte. Las excursiones son cortas, con poco desnivel y con paradas pensadas para jugar, merendar y mirar bichos, de modo que los más pequeños lleguen contentos y con ganas de repetir.
 

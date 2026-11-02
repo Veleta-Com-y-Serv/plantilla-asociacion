@@ -13,7 +13,7 @@ secciones:
   - { id: contacto, nombre: Contacto }
 estilo: cercano
 plan_minimo: gratis
-version: 1.5.0
+version: 1.5.1
 base: astrowind
 demo_url: https://demo-plantilla-asociacion.noexpertise.com
 activa: true
