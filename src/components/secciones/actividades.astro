@@ -1,9 +1,11 @@
 ---
 // Actividades: tarjetas con franja superior de color alterno, icono y cuándo (campo `cuando` opcional por actividad).
+// Las actividades con `detalle` tienen página propia (/actividades/<slug>/): la tarjeta entera enlaza a ella.
 import { seccion } from '../../data/site';
 import Seccion from '../ui/Seccion.astro';
 import Titular from '../ui/Titular.astro';
 import Icono from '../ui/Icono.astro';
+import { enlaceDe } from '../../lib/paginas';
 interface Props { id: string }
 const s = seccion(Astro.props.id);
 const items = (s?.items ?? []) as { titulo: string; texto?: string; icono?: string; cuando?: string }[];
@@ -15,7 +17,7 @@ const items = (s?.items ?? []) as { titulo: string; texto?: string; icono?: stri
       <Titular antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
       <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((it, i) => (
-          <li class:list={['tarjeta overflow-hidden border-t-[6px]', i % 2 ? 'border-t-acento' : 'border-t-primario']}>
+          <li class:list={['tarjeta act-tarjeta overflow-hidden border-t-[6px]', i % 2 ? 'border-t-acento' : 'border-t-primario']}>
             <div class="p-6">
               <div class="flex items-center justify-between gap-3">
                 <span class:list={['grid h-11 w-11 place-items-center rounded-full', i % 2 ? 'bg-acento/20 text-acento' : 'bg-primario/10 text-primario']}>
@@ -23,8 +25,9 @@ const items = (s?.items ?? []) as { titulo: string; texto?: string; icono?: stri
                 </span>
                 {it.cuando && <span class="chip">{it.cuando}</span>}
               </div>
-              <h3 class="mt-4 text-xl text-primario">{it.titulo}</h3>
+              <h3 class="mt-4 text-xl text-primario">{enlaceDe(it) ? <a href={enlaceDe(it)} class="act-enlace">{it.titulo}</a> : it.titulo}</h3>
               {it.texto && <p class="mt-2 opacity-80">{it.texto}</p>}
+              {enlaceDe(it) && <span class="act-ver" aria-hidden="true">Ver más <Icono nombre="flecha" tam={16} /></span>}
             </div>
           </li>
         ))}
@@ -32,3 +35,12 @@ const items = (s?.items ?? []) as { titulo: string; texto?: string; icono?: stri
     </Seccion>
   )
 }
+
+<style>
+  .act-tarjeta { position: relative; }
+  .act-enlace { text-decoration: none; color: inherit; }
+  .act-enlace::after { content: ""; position: absolute; inset: 0; }
+  .act-enlace:focus-visible { outline: none; }
+  .act-tarjeta:has(.act-enlace:focus-visible) { outline: 2px solid var(--c-acento); outline-offset: 2px; }
+  .act-ver { display: inline-flex; align-items: center; gap: .3rem; margin-top: .9rem; font-weight: 750; color: var(--c-primario); }
+</style>

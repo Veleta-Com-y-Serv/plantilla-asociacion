@@ -55,11 +55,61 @@ secciones:
     titulo: Qué hacemos
     texto: "Organizadas por socios voluntarios. Todas las salidas tienen un responsable con formación."
     items:
-      - { titulo: Salidas de montaña, texto: "Rutas de dificultad variada cada sábado o domingo por el Pirineo.", icono: montana, cuando: Fines de semana }
-      - { titulo: Escuela de escalada, texto: "Cursos de iniciación y perfeccionamiento en el rocódromo y en roca.", icono: escudo, cuando: Martes y jueves }
-      - { titulo: Esquí de travesía, texto: "Salidas y curso de seguridad en avalanchas con guía titulado.", icono: sol, cuando: Diciembre – abril }
-      - { titulo: Montaña en familia, texto: "Excursiones cortas pensadas para ir con niños desde 4 años.", icono: nino, cuando: Un domingo al mes }
-      - { titulo: Bici de montaña, texto: "Rutas por la Jacetania y el Camino de Santiago.", icono: bici, cuando: Primavera y otoño }
+      - titulo: Salidas de montaña
+        texto: "Rutas de dificultad variada cada sábado o domingo por el Pirineo."
+        icono: montana
+        cuando: Fines de semana
+        imagenes: "/fotos/galeria-1.jpg; /fotos/galeria-3.jpg"
+        detalle: |
+          Las salidas de montaña son el corazón del club. Cada semana la comisión de salidas propone varias rutas por el Pirineo, de menor a mayor exigencia, para que cualquier socio encuentre una a su medida: desde un paseo por los valles hasta una ascensión a cima con tramos de trepada.
+
+          Cada salida tiene un responsable, socio voluntario con formación, que prepara el itinerario, revisa el parte meteorológico y decide sobre la marcha si conviene seguir o dar la vuelta. Se publica el recorrido con unos días de antelación, con el desnivel esperado, el material necesario y el punto de encuentro, y se organiza el reparto de coches entre quienes se apuntan.
+
+          Es una buena manera de conocer la montaña con gente que la conoce y de hacer amistades. No hace falta tener experiencia: basta con elegir una ruta acorde con tu forma física, llevar calzado adecuado y respetar el ritmo del grupo. Al volver solemos acabar con una cerveza en la sede, contando la jornada.
+      - titulo: Escuela de escalada
+        texto: "Cursos de iniciación y perfeccionamiento en el rocódromo y en roca."
+        icono: escudo
+        cuando: Martes y jueves
+        imagen: /fotos/galeria-2.jpg
+        detalle: |
+          La escuela de escalada acompaña a quien empieza y a quien quiere dar un paso más. Los cursos de iniciación arrancan en el rocódromo, un entorno controlado donde se aprende a atarse, asegurar al compañero, moverse con eficacia y caer con confianza antes de salir a la roca.
+
+          Después llega el trabajo en escuelas al aire libre de la zona, con vías equipadas y grupos reducidos. Los monitores son escaladores con titulación y años de experiencia enseñando, y dedican tiempo a lo que más importa: la seguridad, la técnica de pies, la lectura de la vía y la gestión del miedo.
+
+          El perfeccionamiento está pensado para quienes ya escalan con soltura y quieren aprender maniobras de reunión, rápel, escalada de varios largos o autosocorro. El club presta cuerdas, cascos y arneses a los alumnos que lo necesiten, así que lo único imprescindible es traer ganas y pies de gato.
+      - titulo: Esquí de travesía
+        texto: "Salidas y curso de seguridad en avalanchas con guía titulado."
+        icono: sol
+        cuando: Diciembre – abril
+        imagenes: "/fotos/galeria-4.jpg"
+        detalle: |
+          Durante el invierno el club organiza salidas de esquí de travesía por las montañas del entorno de Jaca, siempre con un guía titulado que elige el itinerario según el estado de la nieve y el boletín de aludes. Es una actividad para esquiadores con buen nivel en pista que quieren descubrir la nieve virgen y el silencio de la alta montaña.
+
+          Antes de la temporada se imparte un curso de seguridad en avalanchas: se aprende a interpretar el terreno y el boletín, a usar el ARVA, la pala y la sonda y a practicar un rescate de compañero. Es obligatorio para participar en las salidas más comprometidas y muy recomendable para todos.
+
+          El club dispone de material para préstamo a los socios, como ARVA o piolets, aunque cada participante aporta sus esquís de travesía con pieles. Las salidas se anuncian con poca antelación, porque dependen de las condiciones de cada semana.
+      - titulo: Montaña en familia
+        texto: "Excursiones cortas pensadas para ir con niños desde 4 años."
+        icono: nino
+        cuando: Un domingo al mes
+        imagen: /fotos/galeria-3.jpg
+        detalle: |
+          Montaña en familia es la propuesta del club para que madres, padres, abuelos y niños salgan juntos al monte. Las excursiones son cortas, con poco desnivel y con paradas pensadas para jugar, merendar y mirar bichos, de modo que los más pequeños lleguen contentos y con ganas de repetir.
+
+          Cada salida tiene un tema: un bosque, un río, una cueva, un pueblo abandonado, las huellas de los animales. Los monitores voluntarios preparan pequeñas dinámicas y juegos de orientación, y los adultos pueden caminar tranquilos sabiendo que hay alguien con formación acompañando al grupo.
+
+          Es una forma sencilla de acercar a los niños a la naturaleza sin presión y de coincidir con otras familias del club. Se avisa con antelación del lugar de encuentro, del material básico, como calzado cómodo, agua y algo de abrigo, y de la comida que conviene llevar.
+      - titulo: Bici de montaña
+        texto: "Rutas por la Jacetania y el Camino de Santiago."
+        icono: bici
+        cuando: Primavera y otoño
+        imagenes: "/fotos/galeria-1.jpg; /fotos/galeria-4.jpg"
+        detalle: |
+          Cuando el calor aprieta o la nieve aún no ha llegado, la sección de bici de montaña aprovecha las pistas y senderos de la Jacetania. Las rutas recorren caminos entre pueblos, tramos del Camino de Santiago y alguna bajada divertida, con un ritmo pensado para disfrutar del paisaje y no solo del esfuerzo.
+
+          Se sale en grupo y se espera a quien lo necesite: un responsable abre la marcha y otro la cierra, y se reparte entre los participantes lo imprescindible para reparar un pinchazo o una cadena rota. Cada ruta indica el tipo de terreno, de modo que cada socio sabe si le encaja con su bicicleta y su preparación.
+
+          Es obligatorio el casco, y conviene llevar agua, algo de comer y ropa para cambios de tiempo. Muchas salidas terminan en el bar de algún pueblo, donde la charla sobre la ruta es parte del programa.
       - { titulo: Biblioteca y charlas, texto: "Más de 900 guías y mapas, y proyecciones en la sede.", icono: calendario, cuando: Viernes }
 
   hazte-socio:
